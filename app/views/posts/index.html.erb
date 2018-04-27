@@ -3,5 +3,6 @@
         제목 : <%= x.title %><br/>
     </a>
     <%= link_to "수정하기", "/posts/edit/#{x.id}"%>
+    <%= link_to "삭제", "/posts/destroy/#{x.id}" %>
     <hr/>
 <% end %>
