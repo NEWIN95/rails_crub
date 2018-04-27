@@ -12,6 +12,10 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post_create.new
+    @post_create.title = params[:head]
+    @post_create.content = params[:inside]
+    @post_create.save
   end
 
   def edit
