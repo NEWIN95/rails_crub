@@ -12,10 +12,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post_create.new
+    @post_create = Post.new
     @post_create.title = params[:head]
     @post_create.content = params[:inside]
     @post_create.save
+    redirect_to '/posts/index'
   end
 
   def edit

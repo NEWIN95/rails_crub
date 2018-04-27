@@ -1,8 +1,9 @@
 <form action="/posts/create" method="POST">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %> <%# 게시글 변조(CSRF)를 방지하기위해 쓰는 토큰입니다. %>
     제목<br/>
-    <input type ="text" name="head"/><br/><br/>
+    <input type="text" name="head"/><br/><br/>
     내용<br/>
-    <textarea rows = "5"></textarea><br/>
+    <textarea rows="5" name="inside"></textarea><br/>
     
-    <input type="submit" value = "글 쓰기"/>
+    <input type="submit" value="글 쓰기"/>
 </form>

@@ -1,2 +1,8 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% Post.all.each do |x| %>
+    <a href = "/posts/show/<%= x.id %>">
+    제목 : <%= x.title %><br/>
+    내용 : <%= x.content %><br/>
+    작성 시간 : <%= x.created_at %>
+    </a>
+    <hr/>
+<% end %>
