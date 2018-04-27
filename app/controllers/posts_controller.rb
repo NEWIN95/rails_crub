@@ -7,6 +7,11 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post_update = Post.find(params[:id])
+    @post_update.title = params[:head]
+    @post_update.content = params[:inside]
+    @post_update.save
+    redirect_to '/posts/index'
   end
 
   def show
@@ -22,6 +27,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post_edit = Post.find(params[:id])
   end
 
   def destroy

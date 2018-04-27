@@ -1,8 +1,7 @@
 <% Post.all.each do |x| %>
     <a href = "/posts/show/<%= x.id %>">
-    제목 : <%= x.title %><br/>
-    내용 : <%= x.content %><br/>
-    작성 시간 : <%= x.created_at %>
+        제목 : <%= x.title %><br/>
     </a>
+    <%= link_to "수정하기", "/posts/edit/#{x.id}"%>
     <hr/>
 <% end %>
