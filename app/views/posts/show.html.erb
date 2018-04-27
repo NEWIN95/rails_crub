@@ -1,2 +1,11 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<%# 제목 %>
+<%= @post_show.title %><br/>
+<hr/>
+<%# 내용 %>
+<%= @post_show.content %><br/>
+
+<%# 작성일자 %>
+<%= @post_show.created_at %><br/>
+
+<%# 목록으로 %>
+<%= link_to "목록으로 이동", "/" %>
